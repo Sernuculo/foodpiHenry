@@ -3,45 +3,41 @@ const { DataTypes } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define(
-    'recipe',
-    {
-      id: {
-        type: DataTypes.UUID,
-        allowNull: false,
-        primaryKey: true,
-        defaultValue: DataTypes.UUIDV4,
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      summary: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-      },
-      healthScore: {
-        type: DataTypes.INTEGER,
-        validate: {
-          min: 0,
-          max: 100,
-        },
-      },
-      /* hace Referencia al paso a paso de la comida */
-      stepbyStep: {
-        /* type: DataTypes.STRING, */
-        type: DataTypes.ARRAY(DataTypes.TEXT),
-      },
-      image: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      createIndb: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: false,
-      },
+  sequelize.define('recipe', {
+    id: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
+      primaryKey: true
     },
-    { timestamps: false }
-  );
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    summary: {
+      type: DataTypes.STRING(1000),
+      allowNull: false
+    },
+    spoonacularScore: {
+      type: DataTypes.FLOAT(1),
+      validate: {
+        min: 0,
+        max: 100
+      }
+    },
+    healthScore:{
+      type: DataTypes.FLOAT(1),
+      allowNull: false,
+      validate: {
+        min: 0,
+        max: 100
+      }
+    },
+    instructions: {
+      type:DataTypes.STRING
+    },
+    image:{
+      type: DataTypes.STRING
+    },
+  });
 };
