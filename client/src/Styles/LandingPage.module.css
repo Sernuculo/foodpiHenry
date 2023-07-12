@@ -1,7 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap'); */
 
 .background {
-    background-image: url("https://images.unsplash.com/photo-1609167830220-7164aa360951?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-image: url("https://cdn.pixabay.com/photo/2014/06/11/17/00/food-366875_640.jpg");
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,14 +23,6 @@
     font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 80px;
     text-align: center;    
-    
-    /* 
-    color: rgb(247, 35, 35);
-    font-family: 'Monoton', cursive;
-    letter-spacing: 8px;
-    */
-
-
 }
 
 .button {

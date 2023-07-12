@@ -15,7 +15,7 @@
     border-style: none;
     display: inline-block;
     background-color: transparent;
-    color:white;
+    color:rgb(231, 226, 226);
     height: 30px;
     font-size: 25px;
     font-family: Lato, Arial, Helvetica, sans-serif;
@@ -27,6 +27,6 @@
 }
 
 .button:hover{
-    color:rgb(82, 83, 82);
+    color:rgb(14, 172, 14);
     cursor: pointer;
 }

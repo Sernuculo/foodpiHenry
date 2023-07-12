@@ -5,11 +5,11 @@
     border-style: outset;
     background-size:cover;
     border-radius: 10px;
-    border-color: rgba(48, 0, 78, 0.87);
+    border-color: #596e79;
     transition: transform .5s;
     margin-top: 5px;
     margin-bottom: 5px;
-    background-color: rgba(49, 206, 180, 0.87);
+    background-color: #dfd3c393;
     text-decoration: none;
 }
 
@@ -24,7 +24,7 @@
     text-decoration: none;
     padding-right: 15px;
     padding-left: 15px;
-    color: rgba(48, 0, 78, 0.87)
+    color: rgba(31, 2, 49, 0.87)
 
 }
 
@@ -36,7 +36,7 @@
     text-align: center;
     padding-right: 15px;
     padding-left: 15px;
-    color: rgba(48, 0, 78, 0.87)
+    color: rgba(31, 2, 49, 0.87)
 }
 
 .image {

@@ -76,7 +76,7 @@ export function searchRecipe(name){
 }
 
 export function postRecipe(payload){
-    return async function(dispatch){//este dispatch no lo use, ver que pasa si lo borro
+    return async function(dispatch){
         try {
             var json = await axios.post(`http://localhost:3001/recipes/create`, payload)
             return json

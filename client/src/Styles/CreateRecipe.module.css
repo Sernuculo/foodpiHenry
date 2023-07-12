@@ -75,10 +75,6 @@
     width: 90%;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 4px;
-    /*
-    border: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    */
 }
 
 .subTextBox {
@@ -97,7 +93,7 @@
     padding: 8px 10px;
     border: none;
     border-radius: 4px;
-    background-color: #2cc3ff;
+    background-color: #2cc3ff81;
     font-weight: bold;
     flex-direction: column;
     align-self: center;
@@ -131,7 +127,7 @@
     border: none;
     border-radius: 10px;
     font-family: Lato, Arial, Helvetica, sans-serif;
-    background-color: #24721a;
+    background-color: #4aa33e9f;
     color: #fff;
     box-shadow: 0 2px 2px rgba(0,0,0,.5); 
     cursor: pointer;

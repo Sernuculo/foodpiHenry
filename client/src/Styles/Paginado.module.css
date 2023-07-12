@@ -8,20 +8,20 @@
 }
 
 .barra li a {
-    color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
     
     float: center;
     padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(240, 237, 237);
     font-weight: 500;
     margin: 0 4px;
     text-align: center;
 }
 
 .barra li a.activo {
-    color: white;
+    color: rgb(250, 235, 235);
     border-radius: 5px;
 }
 
