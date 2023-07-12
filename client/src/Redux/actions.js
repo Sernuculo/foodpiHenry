@@ -21,7 +21,7 @@ export function getDiets(){
                 payload: json.data
             })
         } catch (error) {
-           // console.log(error)
+           console.log(error.message)
         }
     }
 }
