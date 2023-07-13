@@ -38,7 +38,7 @@ const getAllRecipes = async () => {
     const apiRecipesProm = getApiRecipes()
     const dbInfoProm = getDataBaseInfo()
 
-    const [apiRecipes, dbInfo] = await Promise.all([apiRecipesProm, dbInfoProm]) // me conviene asi?? o allinfo = apiRecipes.concat(DbInfo)?? 
+    const [apiRecipes, dbInfo] = await Promise.all([apiRecipesProm, dbInfoProm]) 
 
     return [...apiRecipes, ...dbInfo];
 }
@@ -71,7 +71,7 @@ const searchByIdAtDB = async (id) => {
                 attributes: ["name"],
                 through: {
                     attributes: []
-                } //ver si la sintaxis esta bien escrita
+                } 
             }
          })
         return recipe
