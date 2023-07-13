@@ -1,7 +1,7 @@
 const { Recipe , Diet } = require("../db")
 const axios = require("axios")
 require('dotenv').config()
-const { API_KEY} = process.env;
+const { API_KEY, API_KEY2} = process.env;
 
 const preLoadDiets = async() => {
     try {
