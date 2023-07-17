@@ -24,7 +24,7 @@ export default function Home(){
 
     // Paginado
     const [currentPage, setCurrentPage] = useState(1)
-    const [recipesPerPage] = useState(9)
+    const [recipesPerPage, setRecipesPerPage] = useState(9)
     const indexOfLastRecipe = currentPage * recipesPerPage
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage
     const currentRecipes = allRecipes.slice(indexOfFirstRecipe,indexOfLastRecipe)
@@ -34,8 +34,8 @@ export default function Home(){
     }
     
     // estados locales para renderizar los globales
-    const [setOrder] = useState("")
-    const [setScore] = useState("")
+    const [order,setOrder] = useState("")
+    const [score,setScore] = useState("")
 
     // Handle de cada select
     function handleFilteredDiet(e){
