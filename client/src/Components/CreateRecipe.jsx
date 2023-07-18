@@ -60,12 +60,12 @@ export default function RecipeCreate(){
         })
     }
 
-    function handleSubmit(e){
+    function handleSubmit(event){
         if(!post.title && !post.summary){
-            e.preventDefault()
+            event.preventDefault()
             return alert("The recipe needs a title and a summary")
         } else if(!post.diets.length){
-            e.preventDefault()
+            event.preventDefault()
             return alert("You need to add at least one diet for the recipe")
         } else {
             if (!post.image) {
@@ -96,27 +96,27 @@ export default function RecipeCreate(){
             <form className={styles.formContainer}>
                 <div className={styles.subContainer}>
                     <label className={styles.subTitle}>Title</label>
-                    <input className={styles.subInput} type="text" value={post.title} name="title" onChange={(e) => handleChange(e)} ></input>
+                    <input className={styles.subInput} type="text" value={post.title} name="title" onChange={(event) => handleChange(event)} ></input>
                     {errors.title && (<p className={styles.error}>{errors.title}</p>)}
                 </div>
                 <div className={styles.subContainer}>
                     <label className={styles.subTitle}>Summary</label>
-                    <textarea className={styles.subTextBox} type="text" value={post.summary} name="summary" maxLength="1000" onChange={(e) => handleChange(e)}></textarea>
+                    <textarea className={styles.subTextBox} type="text" value={post.summary} name="summary" maxLength="1000" onChange={(event) => handleChange(event)}></textarea>
                     {errors.summary && (<p className={styles.error}>{errors.summary}</p>)}
                 </div>
                 <div className={styles.subContainer}>
                     <label className={styles.subTitle}>Spoonacular Score</label>
-                    <input className={styles.subInput} type="range" min="0" max="100" value={post.spoonacularScore} name="spoonacularScore" onChange={(e) => handleChange(e)}></input>
+                    <input className={styles.subInput} type="range" min="0" max="100" value={post.spoonacularScore} name="spoonacularScore" onChange={(event) => handleChange(event)}></input>
                     {<p className={styles.data}>{post.spoonacularScore}</p>}
                 </div>
                 <div className={styles.subContainer}>
                     <label className={styles.subTitle}>Health Score</label>
-                    <input className={styles.subInput} type="range" min="0" max="100" value={post.healthScore} name="healthScore" onChange={(e) => handleChange(e)}></input>
+                    <input className={styles.subInput} type="range" min="0" max="100" value={post.healthScore} name="healthScore" onChange={(event) => handleChange(event)}></input>
                     {<p className={styles.data}>{post.healthScore}</p>}
                 </div>
                 <div className={styles.subContainer}>
                     <label className={styles.subTitle}>Instructions</label>
-                    <textarea className={styles.subTextBox} type="text" value={post.instructions} name="instructions" onChange={(e) => handleChange(e)}></textarea>
+                    <textarea className={styles.subTextBox} type="text" value={post.instructions} name="instructions" onChange={(event) => handleChange(event)}></textarea>
                     {errors.instructions && (<p className={styles.error}>{errors.instructions}</p>)}
                 </div>
                 <div className={styles.subContainer}>
