@@ -8,7 +8,7 @@ export default function LandingPage(){
             <div> 
                 <h1 className={styles.apiTitle}>The Recipes Api</h1>
                 <Link to ="/home">
-                    <button className={styles.button}>Bite me!</button>
+                    <button className={styles.button}>Home Page</button>
                 </Link>
             </div>
         </div>
