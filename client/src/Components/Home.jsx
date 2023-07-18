@@ -39,24 +39,24 @@ export default function Home(){
     const [score,setScore] = useState("")
 
     // Handle de cada select
-    function handleFilteredDiet(e){
-        dispatch(filteredByDiet(e.target.value))
+    function handleFilteredDiet(event){
+        dispatch(filteredByDiet(event.target.value))
         setCurrentPage(1)
-        e.preventDefault()
+        event.preventDefault()
     }
 
-    function handleSortedRecipesTitle(e){
-        dispatch(orderByTitle(e.target.value))
+    function handleSortedRecipesTitle(event){
+        dispatch(orderByTitle(event.target.value))
         setCurrentPage(1)
-        setOrder(e.target.value)
-        e.preventDefault()
+        setOrder(event.target.value)
+        event.preventDefault()
     }
 
-    function handleSortedRecipesSpoonScore(e){
-        dispatch(orderBySpoonacularScore(e.target.value))
+    function handleSortedRecipesSpoonScore(event){
+        dispatch(orderBySpoonacularScore(event.target.value))
         setCurrentPage(1)
-        setScore(e.target.value)
-        e.preventDefault()
+        setScore(event.target.value)
+        event.preventDefault()
     }
 
     return (
@@ -68,19 +68,20 @@ export default function Home(){
                 </Link>
             </div>
             <div className={styles.secondContainer}>
-                <select className={styles.selectBar} onChange={(e) => handleSortedRecipesTitle(e)}>
+                <select className={styles.selectBar} onChange={(event) => handleSortedRecipesTitle(event)}>
                     <option value="" >Select Order</option>
                     <option value="Asc">A to Z</option>
                     <option value="Desc">Z to A</option>
 
 
                 </select>
-                <select className={styles.selectBar} onChange={(e) => handleSortedRecipesSpoonScore(e)}>
+                <select className={styles.selectBar} onChange={(event) => handleSortedRecipesSpoonScore(event)}>
                     <option value="" >Select Score</option>
                     <option value="SpoonacularMax">Max Spoonacular Score</option>
                     <option value="SpoonacularMin">Min Spoonacular Score</option>
                 </select>
-                <select className={styles.selectBar} onChange={e => handleFilteredDiet(e)}>
+
+                <select className={styles.selectBar} onChange={event => handleFilteredDiet(event)}>
                     <option value="">Select Diets</option>
                     {allDiets?.map(diet => {
                         return ( <option value={diet.name}>{diet.name}</option>)
