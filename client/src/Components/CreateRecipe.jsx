@@ -6,6 +6,9 @@ import styles from "../Styles/CreateRecipe.module.css"
 
 function validate(post){
     let errors = {}
+    if(post.title.length > 30){
+        errors.title = "tiene una longitud de 30 caracteres"
+    }
     if (!post.title){
         errors.title = "Your recipe needs a title!"
     } else if (!post.summary){
