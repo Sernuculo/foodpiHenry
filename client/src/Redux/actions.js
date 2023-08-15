@@ -64,7 +64,8 @@ export function getDetail(id){
 export function searchRecipe(name){
     return async function(dispatch){
         try {
-            var json = await axios.get(`http://localhost:3001/recipes?name=${name}`)
+            var json = await axios.get(
+                `http://localhost:3001/recipes?name=${name}`)
             return dispatch({
                 type: "SEARCH_RECIPE",
                 payload: json.data
