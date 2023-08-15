@@ -20,10 +20,10 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const { preLoadDiets } = require("./src/Controllers/diets")
-
+const port = process.env.PORT || 3001;
 // Syncing all the models at once.
 conn.sync({ force: true }).then(preLoadDiets).then(() => {
-  server.listen(3001, () => {
-    console.log('Server is listening at 3001'); // eslint-disable-line no-console
+  server.listen(port, () => {
+    console.log('Server is listening at', port); // eslint-disable-line no-console
   });
 });
